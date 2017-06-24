@@ -1,17 +1,17 @@
-{%set name = "Flask-AppBuilder" %}
-{%set version = "1.9.1" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "c0e16fa2311d3b7f718c75c06bafd69e7fe227835f19414506964aa181e991e1" %}
-{%set build_num = "0" %}
+{% set name = "Flask-AppBuilder" %}
+{% set version = "1.9.1" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "c0e16fa2311d3b7f718c75c06bafd69e7fe227835f19414506964aa181e991e1" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
@@ -34,8 +34,8 @@ requirements:
     - flask-babel >=0.10.0
     - flask-login ==0.2.11
     - flask-openid >=1.1.0
-    - flask-sqlalchemy ==2.0
-    - flask-wtf >=0.9.1
+    - flask-sqlalchemy >=2.0,<2.1.99
+    - flask-wtf >=0.12
 
 test:
   imports:
@@ -57,10 +57,10 @@ test:
     - fabmanager --help
 
 about:
-  home: https://github.com/dpgaspar/flask-appbuilder/
+  home: http://flaskappbuilder.pythonanywhere.com/
+  license_file: LICENSE
   license: BSD 3-Clause
   license_family: BSD
-  license_file: LICENSE
   summary: 'Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts and much more.'
   dev_url: https://github.com/dpgaspar/flask-appbuilder/
   doc_url: https://github.com/dpgaspar/flask-appbuilder/
