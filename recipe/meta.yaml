@@ -1,8 +1,8 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "c0e16fa2311d3b7f718c75c06bafd69e7fe227835f19414506964aa181e991e1" %}
+{% set hash_val = "85fa363c5e5e6402f310c1bf00c8b6358d2089f8720897e6d8014a390686863e" %}
 {% set build = 0 %}
 
 package:
