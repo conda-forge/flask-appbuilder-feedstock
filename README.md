@@ -1,7 +1,7 @@
 About flask-appbuilder
 ======================
 
-Home: https://github.com/dpgaspar/flask-appbuilder/
+Home: http://flaskappbuilder.pythonanywhere.com/
 
 Package license: BSD 3-Clause
 
