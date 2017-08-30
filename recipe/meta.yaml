@@ -1,8 +1,8 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "1.9.2" %}
+{% set version = "1.9.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "85fa363c5e5e6402f310c1bf00c8b6358d2089f8720897e6d8014a390686863e" %}
+{% set hash = "8ca786bd7b9c5926cdcd936e82d52a20702c59388bf5f5a8765b6967ff7f832d" %}
 {% set build = 0 %}
 
 package:
@@ -12,7 +12,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   skip: True  # [py36]
@@ -29,14 +29,14 @@ requirements:
 
   run:
     - python
-    - colorama >=0.3
-    - click >=3.0
-    - flask >=0.10
-    - flask-babel >=0.10.0
+    - colorama ==0.3.9
+    - click ==6.7
+    - flask >=0.12.1,<0.12.99
+    - flask-babel ==0.11.1
     - flask-login ==0.2.11
-    - flask-openid >=1.1.0
-    - flask-sqlalchemy >=2.0,<2.1.99
-    - flask-wtf >=0.12
+    - flask-openid ==1.2.5
+    - flask-sqlalchemy ==2.1
+    - flask-wtf >=0.14.2
 
 test:
   imports:
