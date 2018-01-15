@@ -14,9 +14,7 @@ Summary: Simple and rapid application development framework, built on top of Fla
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/flask-appbuilder-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/flask-appbuilder-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/flask-appbuilder-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/flask-appbuilder-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock)
 
 Current release info
 ====================
@@ -66,6 +64,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
