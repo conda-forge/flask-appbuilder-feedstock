@@ -15,12 +15,11 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  skip: True  # [py36]
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
 
 requirements:
   build:
