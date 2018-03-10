@@ -1,8 +1,8 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "1.9.4" %}
+{% set version = "1.10.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "8ca786bd7b9c5926cdcd936e82d52a20702c59388bf5f5a8765b6967ff7f832d" %}
+{% set hash = "e20dc60e35944a6be652b379902b5684377cd3366ff3de713077ba07b3573704" %}
 {% set build = 0 %}
 
 package:
@@ -19,7 +19,7 @@ build:
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
   
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
