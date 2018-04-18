@@ -1,9 +1,8 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "1.9.4" %}
+{% set version = "1.9.6" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "8ca786bd7b9c5926cdcd936e82d52a20702c59388bf5f5a8765b6967ff7f832d" %}
-{% set build = 0 %}
+{% set hash = "4c0b2eca7240060a70ee2a350056e3c4558ae4f6f70aedb415f62f4d28a7999e" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -19,24 +18,26 @@ build:
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
   
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
     - colorama ==0.3.9
     - click ==6.7
     - flask >=0.12.1,<0.12.99
-    - flask-babel ==0.11.1
-    - flask-login ==0.2.11
-    - flask-openid ==1.2.5
+    - flask-login >=0.2.11,<0.2.99
     - flask-sqlalchemy ==2.1
-    - flask-wtf >=0.14.2
+    - flask-openid ==1.2.5
+    - flask-wtf ==0.14.2
+    - flask-babel ==0.11.1
+    - python-dateutil ==2.3
+
 
 test:
   imports:
