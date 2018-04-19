@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "e20dc60e35944a6be652b379902b5684377cd3366ff3de713077ba07b3573704" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -20,12 +19,12 @@ build:
     - fabmanager = flask_appbuilder.console:cli
   
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
@@ -37,6 +36,7 @@ requirements:
     - flask-openid ==1.2.5
     - flask-sqlalchemy ==2.1
     - flask-wtf >=0.14.2
+    - python-dateutil >=2.3,<3
 
 test:
   imports:
