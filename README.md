@@ -14,14 +14,16 @@ Summary: Simple and rapid application development framework, built on top of Fla
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/flask-appbuilder-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/flask-appbuilder-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/flask-appbuilder-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/flask-appbuilder-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/flask-appbuilder-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/flask-appbuilder-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/flask-appbuilder-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/flask-appbuilder-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/flask-appbuilder-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/flask-appbuilder/badges/version.svg)](https://anaconda.org/conda-forge/flask-appbuilder)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/flask-appbuilder/badges/downloads.svg)](https://anaconda.org/conda-forge/flask-appbuilder)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-flask--appbuilder-green.svg)](https://anaconda.org/conda-forge/flask-appbuilder) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/flask-appbuilder.svg)](https://anaconda.org/conda-forge/flask-appbuilder) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/flask-appbuilder.svg)](https://anaconda.org/conda-forge/flask-appbuilder) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/flask-appbuilder.svg)](https://anaconda.org/conda-forge/flask-appbuilder) |
 
 Installing flask-appbuilder
 ===========================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
