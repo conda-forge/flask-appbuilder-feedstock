@@ -14,11 +14,11 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  skip: True  # [py36]
+  noarch: python
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
@@ -34,7 +34,7 @@ requirements:
     - flask-login ==0.2.11
     - flask-openid ==1.2.5
     - flask-sqlalchemy ==2.1
-    - flask-wtf >=0.14.2
+    - flask-wtf ==0.14.2
     - python-dateutil >=2.3, <3
 
 test:
