@@ -1,27 +1,24 @@
 {% set name = "Flask-AppBuilder" %}
 {% set version = "1.11.1" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "c0cb7035a867dbdbcab23877e321d115971c1b2e98f207ee3efcce1eb32cb064" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c0cb7035a867dbdbcab23877e321d115971c1b2e98f207ee3efcce1eb32cb064
 
 build:
-  skip: True  # [py36]
+  noarch: python
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
@@ -34,7 +31,7 @@ requirements:
     - flask-login ==0.2.11
     - flask-openid ==1.2.5
     - flask-sqlalchemy ==2.1
-    - flask-wtf >=0.14.2
+    - flask-wtf ==0.14.2
     - python-dateutil >=2.3, <3
 
 test:
@@ -68,3 +65,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - halldc
