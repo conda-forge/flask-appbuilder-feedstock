@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About flask-appbuilder
 ======================
 
@@ -18,8 +14,17 @@ Summary: Simple and rapid application development framework, built on top of Fla
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/flask-appbuilder-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/flask-appbuilder-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2938&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/flask-appbuilder-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
@@ -115,4 +120,5 @@ Feedstock Maintainers
 
 * [@halldc](https://github.com/halldc/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
+* [@xylar](https://github.com/xylar/)
 
