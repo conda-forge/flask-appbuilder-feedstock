@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "1.12.5" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f48f0fae0a51811f5643c94558a4c83ed7758246575e61bf93e23cb72a66a79d
+  sha256: 095a2abedf4e3d0d38430416c94926c26818d8a54d1a2369d46085bb3a20e906
 
 build:
   noarch: python
@@ -24,16 +24,15 @@ requirements:
 
   run:
     - python
-    - colorama >=0.3.9,<1
-    - click >=6.7,<8
-    - flask >=0.12,<2
-    - flask-babel >=0.11.1,<1
+    - colorama ==0.3.9
+    - click 6.7
+    - flask >=0.10.0,<0.12.99
+    - flask-babel ==0.11.1
     - flask-login >=0.3,<0.5
-    - flask-openid >=1.2.5,<2
-    - flask-sqlalchemy >=2.3,<3
-    - flask-wtf >=0.14.2,<1
+    - flask-openid ==1.2.5
+    - flask-sqlalchemy ==2.1
+    - flask-wtf ==0.14.2
     - python-dateutil >=2.3,<3
-    - pyjwt>=1.7.1
 
 test:
   imports:
