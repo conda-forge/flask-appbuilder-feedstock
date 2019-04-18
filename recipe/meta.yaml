@@ -36,7 +36,6 @@ requirements:
 
 test:
   imports:
-    - examples
     - flask_appbuilder
     - flask_appbuilder.babel
     - flask_appbuilder.charts
