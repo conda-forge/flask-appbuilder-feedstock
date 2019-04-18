@@ -7,8 +7,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/dpgaspar/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: cc632edc652c50fcd3ce47dea67ba78528d1c51cc2c493d59e372920eb8d83b0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bc4a0a7eef31817606bd3fc454057d84cebf4176bcec80d0467cbda5c740ffd5
 
 build:
   noarch: python
