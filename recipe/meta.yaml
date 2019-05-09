@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dc4641e776917318b35e09f9e3f7663fb3ffffc321698515288b608048b5263d
+  sha256: e28408174cac3a284db3dd726ba59a2e8e6f04821c40a36e883ab61f3a160538
 
 build:
   noarch: python
@@ -31,14 +31,14 @@ requirements:
     - flask-babel >=0.11.1,<1
     - flask-login >=0.3,<0.5
     - flask-openid >=1.2.5,<2
-    - flask-sqlalchemy >=2.3,<3
+    - flask-sqlalchemy >=2.4,<3
     - flask-wtf >=0.14.2,<1
     - flask-jwt-extended >=3.18,<4
     - jsonschema >=3.0.1,<4
     - marshmallow >=2.18.0,<2.20
     - marshmallow-enum >=1.4.1,<2
     - marshmallow-sqlalchemy >=0.16.1,<1
-    - prison ==0.1.0
+    - prison >=0.1.0,<1.0.0
     - pyjwt >=1.7.1
     - python-dateutil >=2.3,<3
 
