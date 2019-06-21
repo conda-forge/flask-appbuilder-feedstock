@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a11a31d17674c19859fd0447ea5b13aebe9390507dfb5d7120a470e2f0f6fc8
+  sha256: 8fdf64f861fe05f89c15b6071086ed76109ec1ca24cffb88f5298c3f1dd1351e
 
 build:
   noarch: python
@@ -38,7 +38,7 @@ requirements:
     - marshmallow >=2.18.0,<2.20
     - marshmallow-enum >=1.4.1,<2
     - marshmallow-sqlalchemy >=0.16.1,<1
-    - prison >=0.1.0,<1.0.0
+    - prison >=0.1.2,<1.0.0
     - pyjwt >=1.7.1
     - python-dateutil >=2.3,<3
     - sqlalchemy-utils >=0.32.21,<1
