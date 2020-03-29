@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2cdf552f115eafe36456c9015162d4cae0275c68792015806a58a97622d77a11
+  sha256: 8934017c4dee955fbdd4da122406a14ae54380198f865fe451bfdfe95c9be09e
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - flask-wtf >=0.14.2,<1
     - flask-jwt-extended >=3.18,<4
     - jsonschema >=3.0.1,<4
-    - marshmallow >=2.18.0,<2.20
+    - marshmallow >=2.18.0,<3.0.0
     - marshmallow-enum >=1.4.1,<2
     - marshmallow-sqlalchemy >=0.16.1,<1
     - prison >=0.1.2,<1.0.0
@@ -64,7 +64,7 @@ test:
 about:
   home: http://flaskappbuilder.pythonanywhere.com/
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   summary: Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts
     and much more.
