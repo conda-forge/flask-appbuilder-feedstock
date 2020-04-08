@@ -3,7 +3,7 @@ About flask-appbuilder
 
 Home: http://flaskappbuilder.pythonanywhere.com/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
