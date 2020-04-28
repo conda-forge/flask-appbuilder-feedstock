@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "2.3.2" %}
+{% set version = "2.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 492917d51ab4cc1bfa51b006c89d0e7d0dacfbfc718a687672a968db44d397de
+  sha256: 856f8f58b77d53e21c5e1e3f02784197d3bc44c391065504acf96c790d262f05
 
 build:
   noarch: python
@@ -27,6 +27,7 @@ requirements:
     - apispec[yaml] >=1.1.1,<2
     - colorama >=0.3.9,<1
     - click >=6.7,<8
+    - email_validator >=1.0.5,<2
     - flask >=0.12,<2
     - flask-babel >=1,<2
     - flask-login >=0.3,<0.5
@@ -66,8 +67,7 @@ about:
   license_file: LICENSE
   license: BSD-3-Clause
   license_family: BSD
-  summary: Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts
-    and much more.
+  summary: Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts and much more.
   dev_url: https://github.com/dpgaspar/flask-appbuilder/
   doc_url: https://github.com/dpgaspar/flask-appbuilder/
 
