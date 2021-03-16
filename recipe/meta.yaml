@@ -32,6 +32,8 @@ requirements:
     - flask-babel >=1,<2
     - flask-login >=0.3,<0.5
     - flask-openid >=1.2.5,<2
+    # From upstream: SQLAlchemy 1.4.0 breaks flask-sqlalchemy and sqlalchemy-utils
+    - sqlalchemy <1.4.0
     - flask-sqlalchemy >=2.4,<3
     - flask-wtf >=0.14.2,<0.15.0
     - flask-jwt-extended >=3.18,<4
