@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "3.3.1" %}
+{% set version = "3.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 723c26455e48e47e313d7d90fc96e3cf588991e55e0bc3ee4fa3de385cbb348f
+  sha256: d13015bd2b709562072ac47797103152a6a5e40f87b49a1ba6110840d5b241cb
 
 build:
   noarch: python
