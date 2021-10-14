@@ -40,7 +40,7 @@ requirements:
     - jsonschema >=3.0.1,<4
     - marshmallow >=3,<4
     - marshmallow-enum >=1.5.1,<2
-    - marshmallow-sqlalchemy >=0.22.0,<0.24.0
+    - marshmallow-sqlalchemy >=0.22.0,<0.27.0
     - prison >=0.2.1,<1.0.0
     - pyjwt >=1.7.1,<2.0.0
     - python-dateutil >=2.3,<3
