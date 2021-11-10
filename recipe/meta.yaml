@@ -45,6 +45,7 @@ requirements:
     - pyjwt >=1.7.1,<2.0.0
     - python-dateutil >=2.3,<3
     - sqlalchemy-utils >=0.32.21,<1
+    - wtforms <3.0.0
 
 test:
   imports:
