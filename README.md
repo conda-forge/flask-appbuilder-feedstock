@@ -121,6 +121,5 @@ Feedstock Maintainers
 =====================
 
 * [@halldc](https://github.com/halldc/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 * [@xylar](https://github.com/xylar/)
 
