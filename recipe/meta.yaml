@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c0830935077c4d06d57237ca4791fcabfc682fe3e315c1c9444a2bd6f94e7514
+  sha256: a9fb668240bebd63a9e40376ad30f7d704065060bf231c61c78cd7196c396b27
 
 build:
   noarch: python
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
