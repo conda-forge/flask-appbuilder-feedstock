@@ -41,6 +41,8 @@ requirements:
     - flask-jwt-extended >=3.18,<4
     - jsonschema >=3,<5
     - marshmallow >=3,<4
+    # add missing dependency on packaging
+    - packaging
     - marshmallow-enum >=1.5.1,<2
     - marshmallow-sqlalchemy >=0.22.0,<0.27.0
     - prison >=0.2.1,<1.0.0
