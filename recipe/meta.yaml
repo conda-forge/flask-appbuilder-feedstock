@@ -31,6 +31,8 @@ requirements:
     # an incompatibility with itsdangerous is fixed with later flask versions
     # - flask >=0.12,<2
     - flask >=1.1.4,<2
+    # needed because flask <2 depends on jinja2 <3, which is not compabibel with the lastest markupsafe
+    - markupsafe <2
     - flask-babel >=1,<3
     - flask-login >=0.3,<0.5
     - flask-openid >=1.2.5,<2
