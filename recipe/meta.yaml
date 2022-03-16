@@ -1,5 +1,5 @@
 {% set name = "Flask-AppBuilder" %}
-{% set version = "3.4.4" %}
+{% set version = "3.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,13 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b99ceebcdbaca8ccc04bfbe68370ae67e0f8e362782db170b016e8548c7fb2b1
+  sha256: de53e5da250a3a64865ee0a2ed2f9235117d0206bf6f33bdfe3e3da6334bb0d1
 
 build:
   noarch: python
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,7 +28,11 @@ requirements:
     - colorama >=0.3.9,<1
     - click >=6.7,<9
     - email_validator >=1.0.5,<2
-    - flask >=0.12,<2
+    # an incompatibility with itsdangerous is fixed with later flask versions
+    # - flask >=0.12,<2
+    - flask >=1.1.4,<2
+    # needed because flask <2 depends on jinja2 <3, which is not compabibel with the lastest markupsafe
+    - markupsafe <2
     - flask-babel >=1,<3
     - flask-login >=0.3,<0.5
     - flask-openid >=1.2.5,<2
