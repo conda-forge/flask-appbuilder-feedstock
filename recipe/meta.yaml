@@ -23,7 +23,7 @@ requirements:
 
   run:
     - python >=3.7
-    - apispec >=3.3,<4
+    - apispec >=3.3,<6
     - colorama >=0.3.9,<1
     - click >=8,<9
     - email_validator >=1.0.5,<2
