@@ -1,5 +1,5 @@
 {% set name = "flask-appbuilder" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-AppBuilder-{{ version }}.tar.gz
-  sha256: ad96eed0189fe6939aff3bba302adb189a64a94758cd6c95829eada91cc6c887
+  sha256: 3a6e871d71120ffb25e1d52a862c0327019bdf0478dc4e62100e7923bca2c4f5
 
 build:
   noarch: python
@@ -29,6 +29,7 @@ requirements:
     - email_validator >=1.0.5,<2
     - flask >=2,<3
     - flask-babel >=1,<3
+    - flask-limiter >3,<4
     - flask-login >=0.3,<0.7
     - flask-sqlalchemy >=2.4,<3
     - flask-wtf >=0.14.2,<2
