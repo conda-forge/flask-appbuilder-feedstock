@@ -1,11 +1,11 @@
-About flask-appbuilder
-======================
+About flask-appbuilder-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-appbuilder-feedstock/blob/main/LICENSE.txt)
 
 Home: http://flaskappbuilder.pythonanywhere.com/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-appbuilder-feedstock/blob/main/LICENSE.txt)
 
 Summary: Simple and rapid application development framework, built on top of Flask. includes detailed security, auto CRUD generation for your models, google charts and much more.
 
