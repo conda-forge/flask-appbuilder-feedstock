@@ -1,5 +1,5 @@
 {% set name = "flask-appbuilder" %}
-{% set version = "4.3.3" %}
+{% set version = "4.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-AppBuilder-{{ version }}.tar.gz
-  sha256: b420379f74788e431a2763f8d3749cc37712df682dc00a45538d85d989340768
+  sha256: f349b9bd759f481ce0cf31e1b70727705aa727f42597eba7ab020a7a38059676
 
 build:
   noarch: python
@@ -56,7 +56,6 @@ test:
     - flask_appbuilder.security
     - flask_appbuilder.security.mongoengine
     - flask_appbuilder.security.sqla
-    - flask_appbuilder.tests
     - flask_appbuilder.translations
   requires:
     - pip
