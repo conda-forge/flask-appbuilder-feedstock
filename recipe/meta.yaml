@@ -56,7 +56,6 @@ test:
     - flask_appbuilder.security
     - flask_appbuilder.security.mongoengine
     - flask_appbuilder.security.sqla
-    - flask_appbuilder.tests
     - flask_appbuilder.translations
   requires:
     - pip
