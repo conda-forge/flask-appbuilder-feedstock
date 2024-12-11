@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Flask-AppBuilder-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Flask-AppBuilder-{{ version }}.tar.gz
   sha256: a2242386a7f77df7020654b4d546a9dbac105058d2cd058b7fd9b1db457c2f32
 
 build:
   noarch: python
   entry_points:
     - fabmanager = flask_appbuilder.console:cli
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - apispec >=6.0.0,<7
     - colorama >=0.3.9,<1
     - click >=8,<9
@@ -61,6 +61,7 @@ test:
     - flask_appbuilder.translations
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - fabmanager --help
     - pip check
