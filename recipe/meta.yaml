@@ -1,5 +1,5 @@
 {% set name = "flask-appbuilder" %}
-{% set version = "4.5.4" %}
+{% set version = "4.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Flask-AppBuilder-{{ version }}.tar.gz
-  sha256: eed98f23b13ce893b5030714f51d1464189a6fbadcb4adfdbe0bf7ca7a00092e
+  sha256: fa64a933696ef8654bf75f1f02659a2f17e93be94f2dea65f9e4786a552df974
 
 build:
   noarch: python
@@ -36,8 +36,8 @@ requirements:
     - flask-wtf >=0.14.2,<2
     - flask-jwt-extended >=4.0.0,<5.0.0
     - jsonschema >=3,<5
-    - marshmallow >=3.18.0,<4
-    - marshmallow-sqlalchemy >=0.22.0,<0.29.0
+    - marshmallow >=3.18.0,<5
+    - marshmallow-sqlalchemy >=0.22.0,<3.0.0
     - prison >=0.2.1,<1.0.0
     - pyjwt >=2.0.0,<3.0.0
     - python-dateutil >=2.3,<3
