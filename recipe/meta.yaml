@@ -11,8 +11,6 @@ source:
 
 build:
   noarch: python
-  entry_points:
-    - fabmanager = flask_appbuilder.console:cli
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -52,18 +50,12 @@ test:
     - flask_appbuilder.babel
     - flask_appbuilder.charts
     - flask_appbuilder.models
-    - flask_appbuilder.models.generic
-    - flask_appbuilder.models.mongoengine
-    - flask_appbuilder.models.sqla
     - flask_appbuilder.security
-    - flask_appbuilder.security.mongoengine
-    - flask_appbuilder.security.sqla
     - flask_appbuilder.translations
   requires:
     - pip
     - python {{ python_min }}
   commands:
-    - fabmanager --help
     - pip check
 
 about:
