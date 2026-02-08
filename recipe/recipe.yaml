@@ -56,12 +56,7 @@ tests:
         - flask_appbuilder.security
         - flask_appbuilder.translations
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
 
 about:
   license_file: LICENSE
