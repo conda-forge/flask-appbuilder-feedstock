@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flask-appbuilder
-  version: 5.1.0
+  version: "5.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: b45847353ae9ab7984b9625e43658742559d2c056df4bfe10ad0b49a8b7737b4
+  sha256: a5f6f34aa4ae0092a9eeb5051dc210869d9360429a429b0be88416c2616e1281
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
