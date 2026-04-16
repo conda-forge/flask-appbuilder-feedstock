@@ -9,8 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: dd153b4649f0cd127aeed056a409141299c6f491ecbe297960b37ace07117e72
+  url: https://github.com/dpgaspar/Flask-AppBuilder/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 27cbc8c388bcdfeeab6bbeda4f60a9ca25a27e5540408260a06cc3087efe01d4
 
 build:
   number: 0
