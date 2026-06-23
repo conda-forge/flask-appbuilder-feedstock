@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flask-appbuilder
-  version: "5.2.1"
+  version: 5.2.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: a5f6f34aa4ae0092a9eeb5051dc210869d9360429a429b0be88416c2616e1281
+  sha256: 0527623394b40b859ff47056e3621a61eefaaa16ccf188f272c64294307587ca
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - email-validator >=1.0.5
     - flask >=2,<4
     - flask-babel >=3,<5
-    - flask-limiter >3,<4
+    - flask-limiter >3,<5
     - flask-login >=0.3,<0.7
     - flask-sqlalchemy >=2.4.0,<4
     - flask-wtf >=0.14.2,<2
@@ -45,7 +45,6 @@ requirements:
     - sqlalchemy-utils >=0.32.21,<1
     - wtforms <4
     - werkzeug <4
-
 tests:
   - python:
       imports:
