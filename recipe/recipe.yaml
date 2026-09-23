@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: flask-appbuilder
-  version: 5.2.2
+  version: "5.2.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 0527623394b40b859ff47056e3621a61eefaaa16ccf188f272c64294307587ca
+  sha256: e9f5997b74e704289dd0421a3477a1a05019ccf6f69239cac364a22a08c913ab
 
 build:
   number: 0
