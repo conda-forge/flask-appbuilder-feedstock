@@ -24,6 +24,7 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
+    # apispec[yaml] needs nothing extra on conda-forge
     - apispec >=6.0.0,<7
     - colorama >=0.3.9,<1
     - click >=8,<9
@@ -38,9 +39,9 @@ requirements:
     - jsonschema >=3,<5
     - marshmallow >=3.18.0,<5
     - marshmallow-sqlalchemy >=0.22.0,<3.0.0
+    - python-dateutil >=2.3,<3
     - prison >=0.2.1,<1.0.0
     - pyjwt >=2.0.0,<3.0.0
-    - python-dateutil >=2.3,<3
     - sqlalchemy >=1.4.0,<3
     - sqlalchemy-utils >=0.32.21,<1
     - wtforms <4
@@ -54,7 +55,9 @@ tests:
         - flask_appbuilder.models
         - flask_appbuilder.security
         - flask_appbuilder.translations
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       pip_check: true
 
 about:
